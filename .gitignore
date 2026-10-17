@@ -1,0 +1,18 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+.env
+
+# OS / editors
+.DS_Store
+.vscode/
+.idea/
+
+# Experiment artefacts
+wandb/
+# Checkpoints written when re-running the notebooks (the shipped one lives in checkpoints/)
+notebooks/**/*.pth
