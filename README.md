@@ -4,7 +4,7 @@ Few-shot abstract reasoning on the **1D Abstraction and Reasoning Corpus (1D-ARC
 
 Each 1D-ARC task gives two or three input→output pairs of 1D colour sequences, and the model must produce the output for a new query input. This project encodes the example pairs into a *rule vector*. A **hypernetwork** turns that vector into the weights of a task-specific 1D convolution, and a **neural cellular automaton (NCA)** applies that convolution to the query for 10 steps. Before any of this, each task's colours are relabelled with abstract role IDs, so the model is not tied to a particular palette.
 
-> **Context:** course assignment for *Meta & Transfer Learning* (1D-ARC assignment). The brief required a solution that runs fully offline, with no calls to large language models or other external services.
+> **Context:** course assignment for *Meta & Transfer Learning* (1D-ARC assignment). The brief required a solution that runs fully offline, with no calls to large language models or other external services. Slides: [final presentation](docs/Meta-NCA_1D-ARC_presentation.pdf) · [interim progress deck](docs/Meta-NCA_1D-ARC_interim_deck.pdf) (earlier approach and numbers, kept for the project history).
 
 ## Key results
 
@@ -132,7 +132,8 @@ Files are named `<concept>_<concept>_<index>.json`. Each file holds a `train` li
 ├── data/
 │   └── 1D-ARC/                          # train / test_same_concept / test_cross_concept + upstream LICENSE.md
 ├── docs/
-│   ├── Meta-NCA_1D-ARC_presentation.pdf # 15-slide presentation
+│   ├── Meta-NCA_1D-ARC_presentation.pdf # 15-slide final presentation
+│   ├── Meta-NCA_1D-ARC_interim_deck.pdf # 6-slide interim progress deck (earlier numbers, superseded by the final deck)
 │   └── figures/                         # trajectory figures taken from the slides
 ├── requirements.txt
 ├── LICENSE
